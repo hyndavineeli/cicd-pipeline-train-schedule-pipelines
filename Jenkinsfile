@@ -4,7 +4,7 @@ pipeline{
     stage('Build'){
       steps{
       echo 'Running Build automation Stage'
-      sh './gradle daemon --no-daemon'
+      sh './gradlew build --no-daemon'
       archiveArtifacts artifacts: 'dist/trainSchedule.zip'
       }
     }
